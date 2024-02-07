@@ -14,7 +14,7 @@
 	}
 .image-container {
     width: 100%; /* 컨테이너의 너비를 100%로 설정 */
-    max-width: none; /* 이미지의 최대 너비를 지정 */
+    max-width: 322px; /* 이미지의 최대 너비를 지정 */
     height: auto; /* 이미지의 높이를 지정 */
     overflow-x: auto; /* 가로 스크롤바를 자동으로 추가 */
     white-space: nowrap; /* 이미지들이 가로로 나열되도록 설정 */
@@ -22,7 +22,7 @@
 
 .image-container img {
     display: inline-block; /* 이미지들이 인라인 요소로 나타나도록 설정 */
-    margin-right: 60px; /* 이미지들 사이의 간격을 지정 */
+    margin-right: 30px; /* 이미지들 사이의 간격을 지정 */
     max-width: 100%;
     height: auto; 
 }
