@@ -15,7 +15,7 @@
 .image-container {
     display: flex; /* Flexbox를 사용하여 요소들을 가로로 나열 */
     justify-content: space-between; /* 요소들을 가능한 넓게 분산하여 배치 */
-    width: 100vw; /* 브라우저의 전체 너비를 차지하도록 설정 */
+    width: 100%; /* 브라우저의 전체 너비를 차지하도록 설정 */
     overflow-x: auto; /
 }
 .image-item {
