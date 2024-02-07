@@ -22,7 +22,7 @@
 
 .image-container img {
     display: inline-block; /* 이미지들이 인라인 요소로 나타나도록 설정 */
-    margin-right: 15px; /* 이미지들 사이의 간격을 지정 */
+    margin-right: 60px; /* 이미지들 사이의 간격을 지정 */
     max-width: 100%;
     height: auto; 
 }
