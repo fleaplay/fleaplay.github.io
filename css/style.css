@@ -20,6 +20,7 @@
 }
 .image-item {
     flex: 0 0 auto; /* Flexbox 아이템이 자동으로 크기를 조정하지 않도록 설정 */
+    max-width: 100%;
 }
 
 .image-item img {
