@@ -28,25 +28,50 @@
 
   <style>
     /* 모바일 기기 스타일 */
-    @media (max-width: 767px) {
-      #nav ul {
-        flex-direction: column;
-        padding: 0;
-      }
-
-      #nav li {
-        margin-bottom: 10px;
-      }
-
-      #content {
-        width: 100%;
-      }
-
-      #footer .row > div {
-        width: 100%;
-        margin-bottom: 20px;
-      }
-    }
+	@media (max-width: 767px) {
+	  #header {
+	    padding: 10px 0; /* 헤더 패딩 조정 */
+	  }
+	
+	  #logo {
+	    text-align: center; /* 로고 가운데 정렬 */
+	    margin-bottom: 20px; /* 로고와 메뉴 사이 간격 */
+	  }
+	
+	  #nav ul {
+	    flex-direction: column;
+	    padding: 0;
+	    text-align: center; /* 메뉴 가운데 정렬 */
+	  }
+	
+	  #nav li {
+	    margin-bottom: 10px;
+	  }
+	
+	  #nav a {
+	    display: inline-block; /* 링크 영역 확보 */
+	    padding: 8px 16px; /* 링크 패딩 추가 */
+	    border: 1px solid #ddd; /* 링크 테두리 추가 */
+	    border-radius: 4px; /* 링크 모서리 둥글게 */
+	    background-color: #f5f5f5; /* 링크 배경색 */
+	    color: #333; /* 링크 텍스트 색상 */
+	    text-decoration: none; /* 링크 밑줄 제거 */
+	  }
+	
+	  #nav a:hover {
+	    background-color: #ddd; /* 링크 호버 시 배경색 */
+	  }
+	
+	  /* 기존 스타일 유지 */
+	  #content {
+	    width: 100%;
+	  }
+	
+	  #footer .row > div {
+	    width: 100%;
+	    margin-bottom: 20px;
+	  }
+	}	
   </style>
 </head>
 <body class="homepage">
