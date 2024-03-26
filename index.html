@@ -11,7 +11,7 @@
   <meta name="description" content="">
   <meta name="keywords" content="">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 뷰포트 설정 추가 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="//fonts.googleapis.com/css?family=Arimo:400,700" rel="stylesheet" type="text/css">
   <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -27,51 +27,60 @@
   <!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 
   <style>
+    /* 전체 폰트 설정 */
+    body {
+      font-family: 'Arimo', Arial, sans-serif;
+    }
+
     /* 모바일 기기 스타일 */
-	@media (max-width: 767px) {
-	  #header {
-	    padding: 10px 0; /* 헤더 패딩 조정 */
-	  }
-	
-	  #logo {
-	    text-align: center; /* 로고 가운데 정렬 */
-	    margin-bottom: 20px; /* 로고와 메뉴 사이 간격 */
-	  }
-	
-	  #nav ul {
-	    flex-direction: column;
-	    padding: 0;
-	    text-align: center; /* 메뉴 가운데 정렬 */
-	  }
-	
-	  #nav li {
-	    margin-bottom: 10px;
-	  }
-	
-	  #nav a {
-	    display: inline-block; /* 링크 영역 확보 */
-	    padding: 8px 16px; /* 링크 패딩 추가 */
-	    border: 1px solid #ddd; /* 링크 테두리 추가 */
-	    border-radius: 4px; /* 링크 모서리 둥글게 */
-	    background-color: #f5f5f5; /* 링크 배경색 */
-	    color: #333; /* 링크 텍스트 색상 */
-	    text-decoration: none; /* 링크 밑줄 제거 */
-	  }
-	
-	  #nav a:hover {
-	    background-color: #ddd; /* 링크 호버 시 배경색 */
-	  }
-	
-	  /* 기존 스타일 유지 */
-	  #content {
-	    width: 100%;
-	  }
-	
-	  #footer .row > div {
-	    width: 100%;
-	    margin-bottom: 20px;
-	  }
-	}	
+    @media (max-width: 767px) {
+      #header {
+        padding: 10px 0;
+      }
+
+      #logo {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      #logo h1 {
+        font-size: 24px;
+      }
+
+      #nav ul {
+        flex-direction: column;
+        padding: 0;
+        text-align: center;
+      }
+
+      #nav li {
+        margin-bottom: 10px;
+      }
+
+      #nav a {
+        display: inline-block;
+        padding: 8px 16px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background-color: #f5f5f5;
+        color: #333;
+        text-decoration: none;
+        font-size: 16px;
+      }
+
+      #nav a:hover {
+        background-color: #ddd;
+      }
+
+      #content {
+        width: 100%;
+      }
+
+      #footer .row > div {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
   </style>
 </head>
 <body class="homepage">
