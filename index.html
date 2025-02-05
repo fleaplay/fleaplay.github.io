@@ -2,20 +2,87 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>FleaPlay</title>
-    <link href="https://fonts.googleapis.com/css?family=Arimo:400,700" rel="stylesheet">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <!-- Google Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Arimo:400,700" rel="stylesheet" type="text/css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/skel-noscript.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style-desktop.css">
+
+    <style>
+        /* 네비게이션 스타일 */
+        #nav {
+            width: 100%;
+            background-color: #fff;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px; /* 메뉴 간격 */
+            padding: 0;
+            list-style: none;
+            margin: 0;
+        }
+
+        #nav ul li {
+            display: inline-block;
+        }
+
+        #nav ul li a {
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        /* 활성화된 메뉴 항목 스타일 */
+        #nav ul li.active a {
+            border-bottom: 2px solid #007bff; /* 활성화된 메뉴 밑줄 */
+            color: #007bff;
+        }
+
+        /* 모바일 반응형 */
+        @media screen and (max-width: 768px) {
+            #nav ul {
+                flex-wrap: nowrap; /* 줄바꿈 방지 */
+                overflow-x: auto; /* 가로 스크롤 허용 */
+                white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+                padding-bottom: 5px;
+            }
+
+            #nav ul li a {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+        }
+    </style>
+
 </head>
-<body class="homepage">
+<body class="no-sidebar">
 
     <!-- Header -->
-    <header id="header">
+    <div id="header">
         <div class="container">
+            
+            <!-- Logo -->
             <div id="logo">
                 <h1><a href="#">FleaPlay</a></h1>
             </div>
+
+            <!-- Nav -->
             <nav id="nav">
                 <ul>
                     <li class="active"><a href="index.html">Main</a></li>
@@ -25,113 +92,63 @@
                 </ul>
             </nav>
         </div>
-    </header>
+    </div>
 
-    <!-- Main Content -->
-    <main id="main">
+    <!-- Main -->
+    <div id="main">
         <div class="container">
-            <section id="content">
-                <header>
-                    <h2>Welcome!</h2>
-                    <span class="byline">How to play?</span>
-                </header>
-                <img src="images/pic07.jpg" alt="Game Image">
-                <p>Since 2020, our project has been thriving.</p>
-            </section>
+            <div class="row"> 
+                <!-- Content -->
+                <div id="content" class="12u skel-cell-important">
+                    <section>
+                        <header>
+                            <h2>FleaPlay에 오신 것을 환영합니다</h2>
+                            <span class="byline">다양한 서비스를 한 곳에서 즐기세요</span>
+                        </header>
+                        <div class="image-container">
+                            <div class="image-item"><img src="images/main01.png" alt="" width="322" height="699"></div>
+                            <div class="image-item"><img src="images/main02.png" alt="" width="322" height="699"></div>
+                            <div class="image-item"><img src="images/main03.png" alt="" width="322" height="699"></div>
+                            <div class="image-item"><img src="images/main04.png" alt="" width="322" height="699"></div>
+                        </div>
+                        <br>
+                        <div>
+                            <a href="https://apps.apple.com/app/squadmania/id1531506476">
+                                <img src="images/appstore_down.jpeg" width="300" height="99">
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=com.fleaplay.squad.flutter">
+                                <img src="images/google-play-badge1.png" width="332" height="99"> 
+                            </a>
+                        </div>
+                        <br>
+                    </section>
+                </div>
+            </div>
         </div>
-    </main>
+    </div>
 
     <!-- Footer -->
-    <footer id="footer">
+    <div id="footer">
         <div class="container">
-            <h2>FleaPlay</h2>
-            <a href="mailto:fleaplay.com@gmail.com">fleaplay.com@gmail.com</a>
+            <div class="row">
+                <div class="4u">
+                    <section>
+                        <h2>FleaPlay</h2>
+                        <ul class="default">
+                            <a href="mailto:fleaplay.com@gmail.com">fleaplay.com@gmail.com</a>
+                        </ul>
+                    </section>
+                </div>
+            </div>
         </div>
-    </footer>
+    </div>
 
     <!-- Copyright -->
     <div id="copyright">
         <div class="container">
-            Copyright©<a href="https://fleaplay.com/"> FleaPlay, Inc.</a>
+            Copyright© <a href="https://fleaplay.com/"> FleaPlay, Inc.</a>
         </div>
     </div>
 
-    <!-- CSS for Responsive Design -->
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arimo', sans-serif;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        /* Header */
-        #header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px;
-            background: #333;
-            color: white;
-        }
-
-        #nav ul {
-            list-style: none;
-            display: flex;
-            gap: 15px;
-        }
-
-        #nav ul li {
-            margin: 0;
-        }
-
-        #nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 10px;
-            display: block;
-        }
-
-        /* Main Content */
-        #main {
-            padding: 40px 0;
-            text-align: center;
-        }
-
-        #content img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* Footer */
-        #footer {
-            text-align: center;
-            padding: 20px;
-            background: #222;
-            color: white;
-        }
-
-        /* ✅ 메뉴 항상 보이게 수정 */
-        @media (max-width: 768px) {
-            #nav ul {
-                display: flex;
-                flex-direction: column;
-                text-align: center;
-            }
-
-            #nav ul li a {
-                padding: 12px;
-            }
-        }
-    </style>
 </body>
 </html>
