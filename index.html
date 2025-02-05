@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,13 +56,6 @@
         </div>
     </div>
 
-    <!-- JavaScript for Responsive Menu -->
-    <script>
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            document.getElementById('nav').classList.toggle('active');
-        });
-    </script>
-
     <!-- CSS for Responsive Design -->
     <style>
         * {
@@ -94,24 +87,18 @@
         #nav ul {
             list-style: none;
             display: flex;
+            gap: 15px;
         }
 
         #nav ul li {
-            margin: 0 10px;
+            margin: 0;
         }
 
         #nav ul li a {
             color: white;
             text-decoration: none;
-        }
-
-        #menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 24px;
-            color: white;
-            cursor: pointer;
+            padding: 10px;
+            display: block;
         }
 
         /* Main Content */
@@ -133,22 +120,16 @@
             color: white;
         }
 
-        /* Responsive Design */
+        /* ✅ 메뉴 항상 보이게 수정 */
         @media (max-width: 768px) {
             #nav ul {
-                display: none;
+                display: flex;
                 flex-direction: column;
                 text-align: center;
-                background: #444;
-                padding: 10px;
             }
 
-            #nav ul.active {
-                display: flex;
-            }
-
-            #menu-toggle {
-                display: block;
+            #nav ul li a {
+                padding: 12px;
             }
         }
     </style>
