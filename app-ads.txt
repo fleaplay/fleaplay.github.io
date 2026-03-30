@@ -592,3 +592,11 @@ opera.com, pub4261820774272, RESELLER,55a0c5fd61378de3
 mman.kr,32032,RESELLER
 inmobi.com, 22e5354e453f49348325184e25464adb, RESELLER, 83e75a7ae333ca9d 
 Verve.com, 15503, RESELLER, 0c8f5958fc2d6270 #Verve
+tpmn.io, 410, RESELLER
+tpmn.io, 787, RESELLER
+themediagrid.com, C25FWT, RESELLER, 35d5010d7789b49d
+exelbid.com, 90, RESELLER
+pubnative.net,1003459, RESELLER, d641df8625486a7b
+admize.io, p_1875135418654156, RESELLER
+admixer.co.kr, 1246, RESELLER
+admixer.co.kr, 1223, RESELLER
