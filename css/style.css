@@ -161,6 +161,11 @@ h2 {
   line-height: 1.75;
 }
 
+.wemingle-emphasis {
+  color: #ef2b2d;
+  font-weight: 950;
+}
+
 .hero-actions,
 .store-row {
   display: flex;
@@ -454,11 +459,26 @@ h2 {
   scroll-snap-align: start;
 }
 
-.screen-strip img.web-screen {
-  width: min(58vw, 260px);
-  align-self: center;
-  border-radius: 12px;
-  box-shadow: 0 10px 24px rgba(20, 28, 45, 0.08);
+.web-preview {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  width: fit-content;
+  max-width: 100%;
+  color: var(--blue);
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.web-preview img {
+  width: min(42vw, 180px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(20, 28, 45, 0.08);
+}
+
+.web-preview:hover strong {
+  text-decoration: underline;
 }
 
 .site-footer {
