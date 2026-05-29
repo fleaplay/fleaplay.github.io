@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
+
 :root {
   --paper: #fbfbfa;
   --surface: #ffffff;
@@ -23,7 +25,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  font-family: "Pretendard Variable", Pretendard, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Segoe UI", sans-serif;
   font-size: 16px;
   line-height: 1.7;
 }
@@ -236,6 +238,13 @@ h2 {
   font-weight: 750;
 }
 
+.info-row.subtle span,
+.info-row.subtle strong {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
 .info-row a {
   color: var(--blue);
   text-decoration: none;
@@ -402,6 +411,31 @@ h2 {
   text-decoration: none;
 }
 
+.wemingle-web-link {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 188px;
+  border-color: #ef2b2d;
+  border-radius: 9px;
+  padding: 6px 16px;
+  background: #ef2b2d;
+  color: #fff;
+  line-height: 1.15;
+}
+
+.wemingle-web-link span {
+  font-size: 12px;
+  font-weight: 800;
+  opacity: 0.88;
+}
+
+.wemingle-web-link strong {
+  margin-top: 2px;
+  font-size: 15px;
+  font-weight: 950;
+}
+
 .screen-strip {
   display: flex;
   gap: 14px;
@@ -418,6 +452,13 @@ h2 {
   background: var(--surface);
   box-shadow: 0 12px 30px rgba(20, 28, 45, 0.1);
   scroll-snap-align: start;
+}
+
+.screen-strip img.web-screen {
+  width: min(58vw, 260px);
+  align-self: center;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(20, 28, 45, 0.08);
 }
 
 .site-footer {
