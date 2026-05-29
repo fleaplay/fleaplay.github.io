@@ -119,6 +119,10 @@ img {
   padding: 76px 0 44px;
 }
 
+.home-hero {
+  padding-bottom: 56px;
+}
+
 .eyebrow,
 .section-kicker {
   margin: 0 0 14px;
@@ -162,8 +166,8 @@ h2 {
 }
 
 .wemingle-emphasis {
-  color: #ef2b2d;
-  font-weight: 950;
+  color: #ef2b2d !important;
+  font-weight: 950 !important;
 }
 
 .hero-actions,
@@ -267,6 +271,11 @@ h2 {
 
 .section-heading {
   margin-bottom: 22px;
+}
+
+.separated-section {
+  padding-top: 54px;
+  border-top: 1px solid var(--line);
 }
 
 .project-list {
@@ -471,7 +480,7 @@ h2 {
 }
 
 .web-preview img {
-  width: min(42vw, 180px);
+  width: min(34vw, 120px);
   border: 1px solid var(--line);
   border-radius: 8px;
   box-shadow: 0 8px 20px rgba(20, 28, 45, 0.08);
@@ -565,6 +574,15 @@ h2 {
 
   .screen-strip img {
     width: min(42vw, 136px);
+  }
+
+  .web-preview {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .web-preview img {
+    width: min(58vw, 120px);
   }
 
   .site-footer {
