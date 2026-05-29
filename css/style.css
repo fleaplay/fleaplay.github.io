@@ -247,13 +247,6 @@ h2 {
   font-weight: 750;
 }
 
-.info-row.subtle span,
-.info-row.subtle strong {
-  color: var(--muted);
-  font-size: 14px;
-  font-weight: 700;
-}
-
 .info-row a {
   color: var(--blue);
   text-decoration: none;
@@ -480,7 +473,7 @@ h2 {
 }
 
 .web-preview img {
-  width: min(34vw, 120px);
+  width: min(52vw, 240px);
   border: 1px solid var(--line);
   border-radius: 8px;
   box-shadow: 0 8px 20px rgba(20, 28, 45, 0.08);
@@ -582,7 +575,7 @@ h2 {
   }
 
   .web-preview img {
-    width: min(58vw, 120px);
+    width: min(72vw, 240px);
   }
 
   .site-footer {
