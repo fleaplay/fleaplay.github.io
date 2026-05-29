@@ -284,6 +284,14 @@ h2 {
   text-decoration: none;
 }
 
+.project-app-icon {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgba(20, 28, 45, 0.12);
+}
+
 .project-main strong {
   display: block;
   color: var(--ink);
@@ -356,6 +364,14 @@ h2 {
   font-size: 26px;
 }
 
+.page-app-icon {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 22px;
+  border-radius: 16px;
+  box-shadow: 0 14px 32px rgba(20, 28, 45, 0.14);
+}
+
 .document-page h1 {
   font-size: clamp(44px, 8vw, 76px);
 }
@@ -373,6 +389,17 @@ h2 {
 .store-row img {
   width: auto;
   height: 46px;
+}
+
+.web-store-link {
+  min-width: 76px;
+  border: 1px solid var(--blue);
+  border-radius: 7px;
+  padding: 0 18px;
+  background: var(--blue);
+  color: #fff;
+  font-weight: 900;
+  text-decoration: none;
 }
 
 .screen-strip {

@@ -210,6 +210,11 @@ img {
   box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
 }
 
+.story-image .app-icon {
+  width: min(42%, 170px);
+  border-radius: 28px;
+}
+
 .story-image.blue {
   background: #dfe9ff;
 }
@@ -234,9 +239,15 @@ img {
 }
 
 .story-link {
+  display: inline-block;
+  margin-right: 16px;
   color: var(--blue);
   font-weight: 900;
   text-decoration: none;
+}
+
+.story-link.secondary {
+  color: #111;
 }
 
 .story-link:hover {
@@ -395,6 +406,10 @@ img {
 
   .story-image img {
     width: 110px;
+  }
+
+  .story-image .app-icon {
+    width: 126px;
   }
 
   .work-section {
