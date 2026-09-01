@@ -272,6 +272,27 @@ h2 {
   margin-bottom: 22px;
 }
 
+.development-legend {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.development-legend > div {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: var(--surface);
+}
+
+.development-legend p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
 .separated-section {
   padding-top: 54px;
   border-top: 1px solid var(--line);
@@ -287,7 +308,7 @@ h2 {
 
 .project-row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto auto;
+  grid-template-columns: minmax(0, 1fr) minmax(190px, auto) auto;
   gap: 18px;
   align-items: center;
   padding: 18px 20px;
@@ -339,6 +360,49 @@ h2 {
   color: var(--blue);
   font-size: 13px;
   font-weight: 800;
+}
+
+.project-methods,
+.development-methods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.project-methods {
+  justify-content: flex-end;
+}
+
+.method-badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 28px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 4px 9px;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+.method-badge b {
+  margin-right: 5px;
+  font-weight: 950;
+}
+
+.method-code {
+  border-color: #cfdef2;
+  background: var(--blue-soft);
+  color: var(--blue);
+}
+
+.method-agent {
+  border-color: #bce7e9;
+  background: #eafafb;
+  color: #087782;
 }
 
 .text-link {
@@ -504,39 +568,35 @@ h2 {
 }
 
 .web-store-link {
-  min-width: 76px;
+  flex-direction: column;
+  align-items: flex-start !important;
+  justify-content: center;
+  min-width: 188px;
   border: 1px solid var(--blue);
-  border-radius: 7px;
-  padding: 0 18px;
+  border-radius: 9px;
+  padding: 6px 16px;
   background: var(--blue);
   color: #fff;
+  line-height: 1.15;
   font-weight: 900;
   text-decoration: none;
 }
 
-.wemingle-web-link {
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  min-width: 188px;
-  border-color: #ef2b2d;
-  border-radius: 9px;
-  padding: 6px 16px;
-  background: #ef2b2d;
-  color: #fff;
-  line-height: 1.15;
-}
-
-.wemingle-web-link span {
+.web-store-link span {
   font-size: 12px;
   font-weight: 800;
   opacity: 0.88;
 }
 
-.wemingle-web-link strong {
+.web-store-link strong {
   margin-top: 2px;
   font-size: 15px;
   font-weight: 950;
+}
+
+.wemingle-web-link {
+  border-color: #ef2b2d;
+  background: #ef2b2d;
 }
 
 .screen-strip {
@@ -663,6 +723,14 @@ h2 {
   .project-row {
     grid-template-columns: 1fr;
     gap: 8px;
+  }
+
+  .development-legend {
+    grid-template-columns: 1fr;
+  }
+
+  .project-methods {
+    justify-content: flex-start;
   }
 
   .project-main small {
