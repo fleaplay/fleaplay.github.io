@@ -617,6 +617,13 @@ h2 {
   scroll-snap-align: start;
 }
 
+.screen-strip.landscape img {
+  width: min(80vw, 560px);
+  height: auto;
+  align-self: flex-start;
+  border-radius: 10px;
+}
+
 .web-preview {
   display: inline-flex;
   align-items: center;
