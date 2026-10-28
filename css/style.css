@@ -493,6 +493,10 @@ h2 {
   font-weight: 700;
 }
 
+[data-policy-preview][hidden] {
+  display: none;
+}
+
 .policy-document section {
   padding: 28px 0;
   border-top: 1px solid var(--line);
