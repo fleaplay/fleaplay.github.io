@@ -36,6 +36,7 @@ function selectPolicyVersions(versions, today) {
   var summary = announcement.querySelector("[data-policy-change-summary]");
   var preview = announcement.querySelector("[data-policy-preview]");
   var name = content.dataset.policyName;
+  var japanese = document.documentElement.lang.toLowerCase().startsWith("ja");
   var versions = [];
   var previewing = false;
   var activeEffectiveOn;
@@ -70,7 +71,7 @@ function selectPolicyVersions(versions, today) {
 
   function readableDate(date) {
     var parts = date.split("-");
-    return parts[0] + "년 " + Number(parts[1]) + "월 " + Number(parts[2]) + "일";
+    return japanese ? parts[0] + "年" + Number(parts[1]) + "月" + Number(parts[2]) + "日" : parts[0] + "년 " + Number(parts[1]) + "월 " + Number(parts[2]) + "일";
   }
 
   function render() {
@@ -94,14 +95,14 @@ function selectPolicyVersions(versions, today) {
 
     announcement.hidden = !state.upcoming;
     if (state.upcoming) {
-      heading.textContent = name + " 시행 예정 안내";
-      message.textContent = readableDate(state.upcoming.announcedOn) + " 공고 · " +
-        readableDate(state.upcoming.effectiveOn) + " 시행. " +
-        (state.active ? "시행일까지는 현행 문서가 적용됩니다." : "아래 문서는 시행 전 사전 안내 중입니다.");
-      summary.textContent = state.upcoming.summary ? "주요 내용: " + state.upcoming.summary : "";
+      heading.textContent = name + (japanese ? "の施行予定" : " 시행 예정 안내");
+      message.textContent = japanese
+        ? readableDate(state.upcoming.announcedOn) + "告知・" + readableDate(state.upcoming.effectiveOn) + "施行。" + (state.active ? "施行日までは現行文書が適用されます。" : "以下は施行前の事前案内です。")
+        : readableDate(state.upcoming.announcedOn) + " 공고 · " + readableDate(state.upcoming.effectiveOn) + " 시행. " + (state.active ? "시행일까지는 현행 문서가 적용됩니다." : "아래 문서는 시행 전 사전 안내 중입니다.");
+      summary.textContent = state.upcoming.summary ? (japanese ? "主な内容: " : "주요 내용: ") + state.upcoming.summary : "";
       summary.hidden = !state.upcoming.summary;
       preview.hidden = !state.active;
-      preview.textContent = selected === state.upcoming ? "현행 문서 보기" : "시행 예정 문서 보기";
+      preview.textContent = selected === state.upcoming ? (japanese ? "現行文書を見る" : "현행 문서 보기") : (japanese ? "施行予定の文書を見る" : "시행 예정 문서 보기");
       preview.setAttribute("aria-controls", "policy-document");
       preview.setAttribute("aria-pressed", String(selected === state.upcoming));
     } else {
